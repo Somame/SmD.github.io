@@ -1,0 +1,518 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/**
+   * For IE 6/7 only
+   * Include this rule to trigger hasLayout and contain floats.
+   */
+.cf {
+  *zoom: 1;
+}
+
+/* font */
+@font-face {
+  font-family: "Nunito SemiBold";
+  src: url(Font/Nunito-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Nunito Bold";
+  src: url(Font/Nunito-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Nunito Medium";
+  src: url(Font/Nunito-Medium.ttf);
+}
+
+@font-face {
+  font-family: "Nunito Black";
+  src: url(Font/Nunito-Black.ttf);
+}
+
+@font-face {
+  font-family: "Nunito Extra Bold";
+  src: url(Font/Nunito-ExtraBold.ttf);
+}
+
+body {
+  background-color: #f7fafd;
+}
+
+.container {
+  width: 1400px;
+  margin: auto;
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+}
+
+/* Navigation Bar */
+
+.nav {
+  /* border: 1px solid black; */
+  width: 1100px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.nav .logo,
+.nav .menu {
+  /* border: 1px solid black; */
+  height: 79px;
+  margin-top: 5px;
+  box-sizing: border-box;
+}
+
+.nav .logo {
+  float: left;
+  width: 400px;
+}
+
+.nav .menu {
+  float: right;
+  width: 600px;
+}
+
+.logo img {
+  height: 79px;
+}
+
+.menu .menus {
+  float: right;
+  margin-top: 33px;
+  /* margin-right: 50px; */
+}
+
+.menus ul li {
+  display: inline-block;
+  margin-left: 55px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  font-family: Nunito SemiBold, Arial;
+  font-size: 20px;
+  color: #4a5f72;
+}
+
+/* Carousel */
+
+.carousel {
+  margin-top: 15px;
+  width: 1400px;
+  height: 520px;
+}
+
+.carousel,
+.carousel .name,
+.carousel .foto {
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+}
+
+.carousel .name {
+  width: 550px;
+  float: left;
+  margin-left: 145px;
+  margin-top: 60px;
+}
+
+.carousel .name h1 {
+  font-family: Nunito Extra Bold, Arial;
+  font-size: 60px;
+  color: #4a5f72;
+}
+
+.carousel .name .pekerjaan,
+.carousel .name .domisili {
+  font-family: Nunito Medium, Arial;
+  font-size: 20px;
+  color: #4a5f72;
+  line-height: 25px;
+}
+
+.carousel .name .pekerjaan {
+  margin-top: 35px;
+}
+
+.carousel .name .button a {
+  text-decoration: none;
+  color: #f7fafd;
+}
+
+.carousel .name .button {
+  width: 163px;
+  height: 50px;
+  margin-top: 35px;
+  font-family: Nunito Black, Arial;
+  font-size: 20px;
+  text-align: center;
+  line-height: 52px;
+  background-color: #9ebdd8;
+  border-color: #9ebdd8;
+  border-radius: 20px;
+}
+
+.carousel .foto {
+  width: 700px;
+  float: right;
+  position: relative;
+  height: 520px;
+}
+
+.carousel div {
+  /* border: 1px solid black; */
+}
+
+.carousel .foto-foto {
+  position: absolute;
+  z-index: 2;
+  left: -20px;
+  bottom: -5px;
+}
+
+.carousel .foto-foto img {
+  width: 350px;
+}
+
+.carousel .social-icon {
+  position: absolute;
+  z-index: 3;
+}
+
+.carousel .back {
+  position: absolute;
+  z-index: 1;
+  bottom: -5px;
+  right: 0;
+}
+
+.carousel .back img {
+  height: 520px;
+}
+
+/* About */
+
+.about {
+  /* border: 1px solid black; */
+  width: 1400px;
+  box-sizing: border-box;
+  padding-bottom: 0;
+  margin-top: 0;
+}
+
+.about-content {
+  /* border: 1px solid black; */
+  width: 1100px;
+  margin: 0 auto 40px auto;
+  box-sizing: border-box;
+  position: absolute;
+  /* padding-right: 50px; */
+}
+
+.content {
+  /* border: 1px solid black; */
+  width: 1100px;
+  margin: 0 auto 0 auto;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.about-content h2 {
+  font-family: Nunito Bold, Arial;
+  font-size: 26px;
+  margin: 35px 0 25px 0;
+  color: #26333f;
+}
+
+.about-content p {
+  font-family: Nunito Bold, Arial;
+  font-size: 15px;
+  color: #26333f;
+  line-height: 30px;
+  text-align: justify;
+}
+
+.about .waves {
+  margin: auto;
+}
+
+/* Project */
+
+.experience {
+  width: 1100px;
+  /* border: 1px solid black; */
+  margin: auto;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.experience h2 {
+  font-family: Nunito Bold, Arial;
+  font-size: 26px;
+  margin: 40px 0;
+  color: #26333f;
+}
+
+.kotak-1,
+.kotak-2,
+.kotak-3 {
+  /* border: 1px solid black; */
+  width: 300px;
+  height: 200px;
+  float: left;
+  box-sizing: border-box;
+  border-radius: 15px;
+}
+
+.kotak-1,
+.kotak-2 {
+  margin-right: 96px;
+}
+
+.kotak-1 {
+  background-color: #87a5be;
+}
+
+.kotak-2 {
+  background-color: #87a5be;
+}
+
+.kotak-3 {
+  background-color: #87a5be;
+}
+
+.waves-experience {
+  margin-top: -250px;
+}
+
+/* Kontak */
+
+.contact {
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+  background-color: #9ebdd8;
+  margin-top: -3px;
+}
+
+.contact .contact-content .left h2 {
+  font-family: Nunito Bold, Arial;
+  font-size: 26px;
+  color: #26333f;
+}
+
+.contact .left ul li {
+  display: inline-block;
+  margin-right: 20px;
+  /* border: 1px solid black; */
+}
+
+.contact .left ul {
+  margin-top: 10px;
+  margin-left: 150px;
+  /* border: 1px solid black; */
+}
+
+.contact .left ul li .a-1 {
+  margin-bottom: 3px;
+}
+
+.left p {
+  margin-top: 185px;
+  font-family: Nunito Medium, Arial;
+  font-size: 15px;
+  color: #26333f;
+}
+
+.contact-content {
+  /* height: 100px; */
+  /* border: 1px solid black; */
+  margin: auto;
+  width: 1100px;
+  padding: 30px 0 0 0;
+}
+
+.left,
+.right {
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+}
+
+.left {
+  width: 400px;
+  float: left;
+}
+
+.right {
+  width: 680px;
+  float: right;
+}
+
+.right p {
+  font-family: Nunito Black, Arial;
+  font-size: 15px;
+  color: #26333f;
+  margin: 0 0 4px 2px;
+}
+
+.right .name,
+.right .email,
+.right .message {
+  margin-bottom: 15px;
+}
+
+.right input {
+  width: 670px;
+  height: 25px;
+  border: 0px;
+  margin-left: 2px;
+  border-radius: 5px;
+}
+
+textarea {
+  width: 670px;
+  border: 0px;
+  margin-left: 2px;
+  border-radius: 5px;
+}
