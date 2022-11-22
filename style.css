@@ -341,6 +341,7 @@ body {
   box-sizing: border-box;
   padding-bottom: 0;
   margin-top: 0;
+  margin-bottom: 100px;
 }
 
 .about-content {
@@ -379,7 +380,7 @@ body {
   margin: auto;
 }
 
-/* Project */
+/* Experience */
 
 .experience {
   width: 1100px;
@@ -405,6 +406,19 @@ body {
   float: left;
   box-sizing: border-box;
   border-radius: 15px;
+  padding: 10px;
+}
+
+.experience .kotak-1 .kotak-1-left {
+  border: 1px solid black;
+  float: left;
+  width: 70px;
+}
+
+.experience .kotak-1 .kotak-1-right {
+  border: 1px solid black;
+  float: right;
+  width: 190px;
 }
 
 .kotak-1,
